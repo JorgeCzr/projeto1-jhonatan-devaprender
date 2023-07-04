@@ -1,0 +1,5 @@
+O GitHub é uma plataforma de desenvolvimento colaborativo que aloja projetos na nuvem utilizando o sistema de controle de versões chamado Git. A plataforma ajuda os desenvolvedores a armazenar e administrar o código e faz o registro de mudanças. Geralmente o código é aberto, o que permite realizar projetos compartilhados e manter o acompanhamento detalhado de seu progresso.
+
+Crie um repositório no GitHub
+
+O repositório é uma localização onde se armazena toda a informação de um projeto. Ele pode conter um ou vários arquivos de código, imagens, texto, etc.

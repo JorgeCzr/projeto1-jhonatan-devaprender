@@ -11,3 +11,29 @@ git status
 git status
 git add .
 git status 
+
+Commit
+criar as versões do Código com commit
+
+git commit -m "commit inicial" a mensagem dentro por boa pratica deve ser o que vai representar o que foi feito naquela versão / versão inicial geralmente é chamada de "commit inicial"
+
+
+Enviar arquivos para o repositório na nuvem dentro do git hub 
+
+git remote add origin https://github.com/JorgeCzr/projeto1-jhonatan-devaprender/commits/main         ----- link é do git hub
+Definir para onde o codigo sera enviado de fato 
+
+git push
+para que esse código seja enviado de fato 
+
+definir qual Branch o código devera ser enviado , inicialmente sempre é enviado para master
+
+
+Depois que a primeira versão do código fo criada....
+Ciclo de atualização de código
+
+
+
+
+
+
