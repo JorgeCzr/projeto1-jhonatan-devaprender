@@ -1,0 +1,13 @@
+Comandos Git
+
+1 arquivo 
+
+git init 
+git status
+git add "meu codigo.txt"
+git status
+
+2 arquivos ou mais 
+git status
+git add .
+git status 
