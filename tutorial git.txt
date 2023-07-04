@@ -78,8 +78,78 @@ as Branchs paralelas no caso A e C somente quando estiver a certeza que os códi
 obs: quando estou trabalhando pra mim mesmo e não vou subir para produção,quando meu código não sera exposto uma branch já resolve.
 
 
-O que é merge branch no git?
+O QUE É MERGE BRANCH NO GIT?
 Git merge é o comando que unifica algum histórico bifurcado. Resumindo, o Git merge permite que você pegue as linhas criadas a partir do Git branch e faça uma integração para a ramificação principal.
+
+GIT MERGE COMO UNUIR O CÓDIGO:
+
+Aviso:Antes de fazer o merge por boa pratica para evitar que seja feita em uma versão desatualizada entre na branch principal,ou seja o código mais atual e rode o seguinte comando:
+git pull
+
+ele vai trazer as atualizações do servidor para a maquina local 
+
+Entro na branch principal (master) para onde vai as novas linhas de códigos e digito os seguints comandos:
+
+git merge standing    obs: nesse caso o standing é a branch que foi alterado o código que é da onde estarei puchando as informações para master atual
+git push
+
+
+SEQUENCIA:
+1. git pull da branch principal
+2.gerar uma nova branch apartir da branch principal
+3.trabalhar e adicionar novas funcionalidades na nova branch que criou 
+4.finalizar o trabalho na branch temporária
+5.git checkout na branch principal
+6.git pull
+7.mergiar(unir) o código da branch temporária com a branch principal, depois testar
+8.git push da branch principal
+
+
+USAR UMA BRANCH COMO BASE PARA CRIAR UMA NOVA BRANCH:
+
+git branch - Obs: verifico que estou realmente na master
+git pull - Obs: verifico que estou realmente no código mais atual atualizando
+git checkout -b sistema-de-login master - Obs: neste caso eu coloco o "master" no final do nome para gerar uma nova branch baseada na master
+git branch - confirmar a criação - obs: crie um novo arquivo na maquina local ex: (sistema de login.txt)
+git commit -m "criado sistema de login" - obs: comando para confirmar estas alterações 
+git checkout master - obs : voltar para master
+git pull - obs: atualiza o código da master pois sempre tenho que estar no código mais atual e nunca um desatualizado para fazer o merge
+git merge sistema-de-login -  obs: colocar o nome da merge que estarei puxando as atualizações
+git push - mandar para o servidor git
+
+
+PULL REQUEST UM MERGE DEMOCRATICO:
+
+Ex: Quando estou trablhando na minha branch de funcionalidade A e após acabar quero unir ela a minha branch principal B antes disso por pratica quando se trabalha em alguma empresa 
+eu compartilho com outro programador que vai verificar esse código esse processo é chamado de (pull request) ,solcitação de aprovação.
+
+SEQUENCIA PULL REQUEST:
+git checkout sistema-de-login - entro na branch que será alterada e altero o código no arquivo
+git add .
+git commit -m "adicionado idade ao sistema de login"
+
+para que esse código seja unido com a branch principal seguintes comandos:
+git push - vai aparecer um comando pra copiar e colar 
+
+APÓS ISSO VEM O PROCESSO DE PULL REQUEST :
+abra o git e clique no botão (Compare e pull request)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
