@@ -13,7 +13,7 @@ git add .
 git status 
 
 Commit
-criar as versões do Código com commit
+CRIAR AS VERSÕES DO CÓDIGO COM COMMIT
 
 git commit -m "commit inicial" a mensagem dentro por boa pratica deve ser o que vai representar o que foi feito naquela versão / versão inicial geralmente é chamada de "commit inicial"
 
@@ -31,6 +31,69 @@ definir qual Branch o código devera ser enviado , inicialmente sempre é enviad
 
 Depois que a primeira versão do código fo criada....
 Ciclo de atualização de código
+
+QUANDO UM CÓDIGO FOR ALTERADO,NOVA VERSÃO:
+git add . / git status / git commit -m "colocar um novo nome relacionado a alteração" / git push
+
+
+COMO VERIFICAR HISTÓRICO DE ATUALIZAÇÕES / VERSÕES:
+git reflog
+
+
+
+VOLTAR VERSÕES:
+
+Versão antiga
+git reset --hard c3a6cba  
+confirma abrindo o arquivo e o código é alterado para versão desejada,versão anterior
+
+obs: c3a6cba esse código representa a versão..
+
+Versão atual
+git reflog / escolha a versão desejada
+git reset --hard dca7f19      passa o id
+confirma abrindo o arquivo e o código é alterado para versão desejada,versão anterior
+
+
+O QUE SÃO BRANCHES E COMO CRIAR UMA:
+
+git branch     serve para verificar quantas branchs eu tenho disponivel
+git branch standing    obs: standing é apenas um nome dado a ramificações por boa pratica de mercado
+
+Após serem criadas quando verifico as branchs uma delas estara com * e pintada de verde , isso significa que estou trabalhando com aquela branch,
+caso precise alterar para alguma ramificação dou o seguinte comando:
+
+git checkout standing     obs standing nesse caso é o nome da branch criada no exemplo acima para que ela seja selecionada e para confirmar rode o seguinte comando:
+git branch
+
+Após rodar esse comando vou perceber que a branch (standing) que foi selecionada vai ficar com o * e pintada de verde
+
+
+
+O branch é a solução perfeita, pois cria uma ramificação do código principal para que seja possível fazer alterações sem nenhum tipo de problema. É importante ressaltar que uma ramificação não depende da outra para ser desenvolvida.
+
+Obs: A Branch master é a principal quando ela é criada , apartir dela pode se criar ramificações ex: A,B,C supondo que a (B) seja a Branch master e nela sejam enviadas as versões 
+que são alterações no código ou até mesmo correções de bugs,quando se trabalha com equipes geralmente se tem a necesidade de trabalhar com outras branchs para que se mantenham a branch principal estavel e nela sera colocada apenas códigos que funcionam.
+as Branchs paralelas no caso A e C somente quando estiver a certeza que os códigos estão funcionando serão passadas para Branch B a principal , isso se chama MERGE
+obs: quando estou trabalhando pra mim mesmo e não vou subir para produção,quando meu código não sera exposto uma branch já resolve.
+
+
+O que é merge branch no git?
+Git merge é o comando que unifica algum histórico bifurcado. Resumindo, o Git merge permite que você pegue as linhas criadas a partir do Git branch e faça uma integração para a ramificação principal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
