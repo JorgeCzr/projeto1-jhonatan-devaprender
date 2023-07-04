@@ -78,8 +78,109 @@ as Branchs paralelas no caso A e C somente quando estiver a certeza que os códi
 obs: quando estou trabalhando pra mim mesmo e não vou subir para produção,quando meu código não sera exposto uma branch já resolve.
 
 
-O que é merge branch no git?
+O QUE É MERGE BRANCH NO GIT?
 Git merge é o comando que unifica algum histórico bifurcado. Resumindo, o Git merge permite que você pegue as linhas criadas a partir do Git branch e faça uma integração para a ramificação principal.
+
+GIT MERGE COMO UNUIR O CÓDIGO:
+
+Aviso:Antes de fazer o merge por boa pratica para evitar que seja feita em uma versão desatualizada entre na branch principal,ou seja o código mais atual e rode o seguinte comando:
+git pull
+
+ele vai trazer as atualizações do servidor para a maquina local 
+
+Entro na branch principal (master) para onde vai as novas linhas de códigos e digito os seguints comandos:
+
+git merge standing    obs: nesse caso o standing é a branch que foi alterado o código que é da onde estarei puchando as informações para master atual
+git push
+
+
+SEQUENCIA:
+1. git pull da branch principal
+2.gerar uma nova branch apartir da branch principal
+3.trabalhar e adicionar novas funcionalidades na nova branch que criou 
+4.finalizar o trabalho na branch temporária
+5.git checkout na branch principal
+6.git pull
+7.mergiar(unir) o código da branch temporária com a branch principal, depois testar
+8.git push da branch principal
+
+
+USAR UMA BRANCH COMO BASE PARA CRIAR UMA NOVA BRANCH:
+
+git branch - Obs: verifico que estou realmente na master
+git pull - Obs: verifico que estou realmente no código mais atual atualizando
+git checkout -b sistema-de-login master - Obs: neste caso eu coloco o "master" no final do nome para gerar uma nova branch baseada na master
+git branch - confirmar a criação - obs: crie um novo arquivo na maquina local ex: (sistema de login.txt)
+git commit -m "criado sistema de login" - obs: comando para confirmar estas alterações 
+git checkout master - obs : voltar para master
+git pull - obs: atualiza o código da master pois sempre tenho que estar no código mais atual e nunca um desatualizado para fazer o merge
+git merge sistema-de-login -  obs: colocar o nome da merge que estarei puxando as atualizações
+git push - mandar para o servidor git
+
+
+PULL REQUEST UM MERGE DEMOCRATICO:
+
+Ex: Quando estou trablhando na minha branch de funcionalidade A e após acabar quero unir ela a minha branch principal B antes disso por pratica quando se trabalha em alguma empresa 
+eu compartilho com outro programador que vai verificar esse código esse processo é chamado de (pull request) ,solcitação de aprovação.
+
+SEQUENCIA PULL REQUEST:
+git checkout sistema-de-login - entro na branch que será alterada e altero o código no arquivo
+git add .
+git commit -m "adicionado idade ao sistema de login"
+
+para que esse código seja unido com a branch principal seguintes comandos:
+git push - vai aparecer um comando pra copiar e colar 
+
+APÓS ISSO VEM O PROCESSO DE PULL REQUEST :
+-abra o git e clique no botão (Compare e pull request)
+-compare: sistema-de-login para base:master
+-titulo deixa o mesmo que foi alterado 
+-deixe uma mensagem ex,adicionado o requisito de idade para que possa ser validado que o usuário é maior de idade ou não , e adicionado o cpf para comprovar que de fato é um usuário real.
+-clique no botão (create pull request)
+
+- quando tem pessoas para aprovar a pull request no git clica ao lado vai ter uma aba chamada (Reviews) são as pessoas que vão revisar o código, geralmente são uma ou duas.
+essas pessoas podem aprovar ou não o código e caso seja reprovado faça as correções e envie um novo commit e não precisa abrir uma pull request nova , deixe um comentário marcando as pessoas que reprovou dizendo que foi feita as alterações solcitadas.
+
+- quando só tem eu pra fazer o merge clico no botão (merge pull request) e (confirm merge) o botão vai ficar da cor roxa confirmando que os códigos já foram mergiados.
+- só confirmar na branch master as alterações 
+
+
+GIT IGNORE PARA QUE SERVE:
+
+Supondo que eu tenha alguns arquivos na minha maquina e tenha alguns deles que eu não quero enviar para o meu sistema de versões , vamos dizer que eu crie uma nova pasta chamada (segredos) e dentro dela crio um arquivo de texto chamado senha e uma senha dentro 
+se eu rodar o comando git status vai pedir para que esta pasta seja adicionada porém nesse caso eu não quero então digito o seguinte comando:
+
+touch .gitignore
+
+-sera criado na pasta um arquivo chamado gitignore, clico com o botão direito e abro com bloco de notas
+-dentro dele vou definir quais pastas ou arquivos eu não quero que seja adicionado ao controle de versão , nesse caso digito (segredos/ e aperto ctrl+s) e fecho ou caso seja com fotos crie (fotos.png)
+-git status no terminal vou perceber que ele não esta mais adicionando a pasta segredos e ele vai ignorar esta pasta.
+
+Obs:importante que adicione o arquivo gitignore porque ele que controla o que sera escondido ou não.
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
