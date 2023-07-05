@@ -132,6 +132,7 @@ para que esse código seja unido com a branch principal seguintes comandos:
 git push - vai aparecer um comando pra copiar e colar 
 
 APÓS ISSO VEM O PROCESSO DE PULL REQUEST :
+<<<<<<< HEAD
 -abra o git e clique no botão (Compare e pull request)
 -compare: sistema-de-login para base:master
 -titulo deixa o mesmo que foi alterado 
@@ -160,11 +161,6 @@ Obs:importante que adicione o arquivo gitignore porque ele que controla o que se
 
 
 
-
-
-
-
- 
 
 
 
