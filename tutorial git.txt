@@ -9,7 +9,7 @@ Comandos Git
 
 1 arquivo 
 
-git init 
+git init - serve para inicializar o primeiro repositório
 git status
 git add "meu codigo.txt"
 git status
