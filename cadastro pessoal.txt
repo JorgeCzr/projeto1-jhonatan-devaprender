@@ -1,4 +1,8 @@
-Nome completo: Jorge Augusto Moreria Cezar
+Nome completo: Jorge Augusto Moreira Cezar
 Data de nascimento: 22/09/01
+<<<<<<< HEAD
 CPF: 22504530609
 SEXO: Masculino 
+=======
+CPF 22504530609
+>>>>>>> 8b0974f136a13ec38f17c57251e4231d9191e26d
