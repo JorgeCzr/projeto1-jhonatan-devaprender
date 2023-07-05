@@ -62,7 +62,7 @@ git reset --hard dca7f19      passa o id
 confirma abrindo o arquivo e o código é alterado para versão desejada,versão anterior
 
 
-O QUE SÃO BRANCHES E COMO CRIAR UMA:
+O QUE SÃO BRANCHES LOCAL E COMO CRIAR UMA:
 
 git branch     serve para verificar quantas branchs eu tenho disponivel
 git branch standing    obs: standing é apenas um nome dado a ramificações por boa pratica de mercado
@@ -85,10 +85,19 @@ as Branchs paralelas no caso A e C somente quando estiver a certeza que os códi
 obs: quando estou trabalhando pra mim mesmo e não vou subir para produção,quando meu código não sera exposto uma branch já resolve.
 
 
-DELETAR BRANCH:
+DELETAR BRANCH LOCAL:
 para deletar uma branch é importante ressaltar que não pode estar conectado nela ex; se eu tiver 3 branches master ,login e cadastro e eu quero deletar a de login eu preciso estar na master ou na de cadastro.
 
 git branch -d login 
+
+
+RENOMEAR BRANCH LOCAL:
+ex: supondo que eu tenhas estas 3 branchs test01,test02,test03 e quero renomear a test03 para test04
+
+git branch -m test03 test04
+
+
+
 
 
 O QUE É MERGE BRANCH NO GIT?
