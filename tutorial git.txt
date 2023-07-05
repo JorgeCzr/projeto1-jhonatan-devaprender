@@ -85,6 +85,12 @@ as Branchs paralelas no caso A e C somente quando estiver a certeza que os códi
 obs: quando estou trabalhando pra mim mesmo e não vou subir para produção,quando meu código não sera exposto uma branch já resolve.
 
 
+DELETAR BRANCH:
+para deletar uma branch é importante ressaltar que não pode estar conectado nela ex; se eu tiver 3 branches master ,login e cadastro e eu quero deletar a de login eu preciso estar na master ou na de cadastro.
+
+git branch -d login 
+
+
 O QUE É MERGE BRANCH NO GIT?
 Git merge é o comando que unifica algum histórico bifurcado. Resumindo, o Git merge permite que você pegue as linhas criadas a partir do Git branch e faça uma integração para a ramificação principal.
 
